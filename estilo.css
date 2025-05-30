@@ -1,0 +1,688 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+margin: 20px;
+padding: 20px;
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo img {
+    max-width: 150px;
+    height: auto;
+
+  }
+  header {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 20px;
+  }
+  .top-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+    margin: 30px;
+    padding: 20px 0;
+  }
+  .top-nav .icon {
+    font-size: 16px;
+  }
+  .main-nav {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    margin: 0 20px;
+    padding: 20px 30px;
+    font-size: 15px;
+  }
+  .main-nav a,
+.top-nav a {
+  text-decoration: none;
+  color: #333;
+}
+.main-nav a:hover,
+.top-nav a:hover {
+  color: #6a1b9a;
+}
+.divider {
+    border-bottom: 1px solid #ccc;
+    margin: 0 20px;
+  }
+  /* Sección hero */
+.hero {
+    position: relative;
+    text-align: center;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.9;
+  }
+  
+  /* Botones sobre la imagen */
+  .hero-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .hero-buttons a {
+    background-color: #1db3c4;
+    color: white;
+    padding: 50px 50px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+  }
+  .hero-buttons a:hover{
+    background-color: #fa5e0a;  
+    cursor: pointer;
+    transform: scale(1.2);
+ }
+
+  
+  /* Accesos rápidos */
+  .quick-access {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: white;
+  }
+  
+  .access-box {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+  }
+  
+  .access-box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  .formulario-container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    text-align: center;
+    color: #6a1b9a;
+    margin-bottom: 2rem;
+  }
+  h3{
+    text-align: center;
+
+  }
+  p {
+    margin-bottom: 30px;
+    text-align: center;
+
+  }
+
+  .opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .btn {
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    font-size: 1.2em;
+    border: 1px solid #500D97;
+    background-color: #F3F3F3;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .btn:hover {
+    background-color: #dbcee9;
+  }
+  .opcion1 {
+    background-color: white;
+  }
+  .opcion2 {
+    background-color:  white;
+  }
+
+ 
+  #contacto{
+    color:#6a1b9a;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+
+  }
+  .contactame h3{
+    color: black;
+    margin-bottom: 2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: sans-serif;
+  }
+  
+  /* Estilo general para inputs y selects */
+  input,
+  select {
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 0.5px solid #6a1b9a;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    width: 80%;
+  }
+  
+  /* Placeholder centrado (opcional) */
+  input::placeholder {
+    color: #555;
+  }
+  
+  /* Estilo para la etiqueta (como el “¿Qué te interesa?”) */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;     /* Organiza los elementos en columna */
+}
+textarea {
+  width: 80%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 0.5px solid #6a1b9a;
+  border-radius: 8px;
+  font-size: 1em;
+  resize: vertical; /* Permite redimensionar verticalmente */
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  outline: none;
+  border: 2px solid  #6a1b9a;
+}
+.checkbox-container {
+  display: flex; /* Para alinear el checkbox y el texto */
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px; /* Espacio entre el checkbox y el texto */
+  transform: scale(1.2); /* Aumenta un poco el tamaño del checkbox */
+}
+
+.checkbox-container label a {
+  color: #007bff; /* Color azul para el enlace */
+  text-decoration: none; /* Quita el subrayado por defecto */
+}
+
+.checkbox-container label a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+.boton-enviar {
+  background-color:#6a1b9a;; /* Fondo negro como en la imagen */
+  color: #fff; /* Texto blanco */
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.boton-enviar:hover {
+  background-color: #333; /* Color un poco más claro al pasar el ratón */
+}
+.foto_contacto{
+  width: 100%;
+  height: 20%;
+  height: auto;
+  display: flex;
+  opacity: 0.9;
+}
+.queestudiar{
+  background-image: url('tu-imagen-hero.jpg'); /* Cambia por tu imagen real */
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.queestudiar h1 {
+  color: #6a1b9a;;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.info {
+  background-image: url('img/libros.jpg'); /* Cambia por imagen desenfocada */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+}
+
+.info-contenido {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.info p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid #6a1b9a;
+  border-radius: 50px;
+  text-decoration: none;
+  color:#6a1b9a;;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.boton:hover {
+  background: black;
+  color: white;
+}
+.programacion {
+  background-color: #f3f3f3;
+  padding: 60px 20px;
+}
+
+.centro-contenido {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.centro-contenido h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.centro-contenido p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  background-color: white;
+  border-radius: 10px;
+  width: 220px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+
+
+}
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.card h3 {
+  margin-top: 15px;
+}
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.team img {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid #6C1DFF;
+}
+
+footer {
+  background-color: #6C1DFF;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+.metodologia-info {
+  background-color: #f9f9f9;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.metodologia-info .texto {
+  max-width: 800px;
+}
+
+.metodologia-info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.metodologia-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.boton-container {
+  margin-top: 20px;
+}
+
+.boton-descubrenos {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: white;
+  border: 2px solid #6C1DFF;
+  border-radius: 50px;
+  text-decoration: none;
+  color:#6C1DFF;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.boton-descubrenos:hover {
+  background-color: rgb(105, 101, 101);
+  color: white;
+}
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center; /* opcional si quieres centrar también verticalmente */
+  width: 90%;         /* ajusta al ancho normal */
+  max-width: 900px;
+  margin: 0 auto;      /* centra el contenedor dentro de la página */
+  padding: 20px;
+
+}
+.caja_video{
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgb(73, 33, 33);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  width: 80%;
+  max-width: 900px;
+}
+
+.caja_video:hover{
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px #6C1DFF;
+}
+.caja_video iframe{
+  width: 100%;
+  height: 100%;
+  border:none;
+  border-radius: 15px;
+  aspect-ratio: 16/9;/*el mas utilizado para videos de youtube*/
+}
+
+.aula-virtual {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contenido-aula {
+  max-width: 800px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contenido-aula h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:#6C1DFF;
+}
+
+.contenido-aula p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+.footer {
+  background-color: #ffffff;
+  color: #333;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Texto superior */
+.footer p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor: uno a la izquierda, otro a la derecha */
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Direcciones */
+.direccion_mad,
+.direccion_bcn {
+  width: 45%;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Enlace de email */
+.footer_mail-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.footer_mail-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: que se acomoden uno debajo del otro en pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer_content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .direccion_mad,
+  .direccion_bcn {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+.footer_redes {
+  margin-bottom: 1.5rem;
+}
+
+.footer_redes a {
+  color: #333;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.footer_redes a:hover {
+  color: #0066cc; /* o el color que encaje con tu web */
+}
+.contenedor-principal {
+  flex: 1; /* ocupa todo el espacio disponible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+.formulario-matricula {
+  background-color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.formulario-matricula h2 {
+  text-align: center;
+  color: #6C1DFF;
+  margin-bottom: 1.5rem;
+}
+
+.formulario-matricula label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.formulario-matricula input,
+.formulario-matricula select,
+.formulario-matricula textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.formulario-matricula button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #6C1DFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-matricula button:hover {
+  background-color: #5023cc;
+}
+
+.foto_matricula {
+  width: 100%;
+  max-width: 1000px; /* opcional, por si quieres limitar el tamaño */
+  margin: 0 auto;     /* centra la sección si tiene un ancho limitado */
+  padding: 20px 0; 
+}
+
+.foto_matricula img {
+  width: 100%;  
+  height: auto;   /* mantiene proporción */
+  max-height: 300px;   /* limita la altura si es muy grande */
+  object-fit: cover;   /* recorta para que se vea bien sin deformar */
+  border-radius: 10px; /* opcional, para bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* opcional, para que resalte */
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
